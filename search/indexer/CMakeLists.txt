@@ -13,7 +13,7 @@
 #  Romain Bertholon <rbe@digital-forensic.org>
 #  Christophe Malinge <cma@digital-forensic.org>
 
-if(EXISTS ${CLUCENE_CONFIG_INCLUDE_PATH} AND EXISTS ${CLUCENE_LIBRARY})
+if(${CLUCENE_CONFIG_INCLUDE_PATH} AND ${CLUCENE_LIBRARY})
   find_package(SWIG REQUIRED)
   include(${SWIG_USE_FILE})
 
@@ -44,4 +44,4 @@ if(EXISTS ${CLUCENE_CONFIG_INCLUDE_PATH} AND EXISTS ${CLUCENE_LIBRARY})
   
   install_lib(${SWIG_MODULE_INDEXER_REAL_NAME})
   install_file(indexer ${indexer_files})
-endif(EXISTS ${CLUCENE_CONFIG_INCLUDE_PATH} AND EXISTS ${CLUCENE_LIBRARY})
+endif(${CLUCENE_CONFIG_INCLUDE_PATH} AND ${CLUCENE_LIBRARY})
